@@ -1,0 +1,203 @@
+/* General Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f8f5;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #006633, #003d19);
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00ff99, #00cc66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    animation: slideUp 1.2s ease;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #00ff99, #00cc66);
+    color: #0c0c0c;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #00cc66, #00ff99);
+    transform: scale(1.1);
+}
+
+/* Fade In and Slide Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Section Styling */
+.section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.section:nth-child(even) {
+    background-color: #111;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Heartbeat Animation on Gesundheitliche Aspekte Image */
+.section-image.health-image {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.section-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.text-content {
+    max-width: 600px;
+    animation: fadeIn 1.5s ease;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00ff99;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.section ul li strong {
+    color: #00ff99;
+}
+
+/* Icon Styling */
+.section i {
+    font-size: 1.3em;
+    color: #00ff99;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0c0c0c;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .section-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
