@@ -9,10 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="softdev logo.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Tan+Mon+Cheri&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#reasons">Gründe</a></li>
+                <li><a href="#laws">Gesetze</a></li>
+                <li><a href="#health">Gesundheit</a></li>
+                <li><a href="#economy">Wirtschaft</a></li>
+                <li><a href="#conclusion">Schlussfolgerung</a></li>
+            </ul>
+        </nav>
         <div class="header-content" data-aos="fade-down">
             <h1>🌿 Legalisierung von Cannabis</h1>
             <p>Ein umfassender Blick auf die Gründe, gesetzlichen Regelungen, gesundheitlichen Aspekte und wirtschaftlichen Auswirkungen.</p>
@@ -23,7 +35,7 @@
     </header>
 
     <main>
-        <section id="reasons" class="section" data-aos="fade-right">
+        <section id="reasons" class="section" data-aos="zoom-in-up">
             <div class="section-content">
                 <img src="reasons.jpg" alt="Cannabis plant" class="section-image">
                 <div class="text-content">
@@ -39,7 +51,7 @@
             </div>
         </section>
 
-        <section id="laws" class="section" data-aos="fade-left">
+        <section id="laws" class="section" data-aos="fade-right">
             <div class="section-content">
                 <img src="laws.jpeg" alt="Gavel and law book" class="section-image">
                 <div class="text-content">
@@ -55,24 +67,22 @@
             </div>
         </section>
 
-        <!-- Gesundheitliche Aspekte Section -->
-<div class="section">
-    <div class="section-content">
-        <img src="health.svg" alt="Gesundheitliche Aspekte" class="section-image health-image">
-        <div class="text-content">
-            <h2>Gesundheitliche Aspekte</h2>
-            <ul>
-                <li><i class="fas fa-heartbeat"></i> Psychische Gesundheit</li>
-                <li><i class="fas fa-lungs"></i> Körperliche Gesundheit</li>
-                <li><i class="fas fa-smoking-ban"></i> Rauchgefahr</li>
-                <li><i class="fas fa-info-circle"></i> Prävention</li>
-            </ul>
-        </div>
-    </div>
-</div>
+        <section id="health" class="section" data-aos="flip-left">
+            <div class="section-content">
+                <img src="health.svg" alt="Gesundheitliche Aspekte" class="section-image health-image">
+                <div class="text-content">
+                    <h2>Gesundheitliche Aspekte</h2>
+                    <ul>
+                        <li><i class="fas fa-heartbeat"></i> Psychische Gesundheit</li>
+                        <li><i class="fas fa-lungs"></i> Körperliche Gesundheit</li>
+                        <li><i class="fas fa-smoking-ban"></i> Rauchgefahr</li>
+                        <li><i class="fas fa-info-circle"></i> Prävention</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-
-        <section id="economy" class="section" data-aos="fade-left">
+        <section id="economy" class="section" data-aos="zoom-in-up">
             <div class="section-content">
                 <img src="economy.jpg" alt="Economic growth graph" class="section-image">
                 <div class="text-content">
@@ -87,6 +97,26 @@
                 </div>
             </div>
         </section>
+
+        <!-- Neuer Abschnitt für die Schlussfolgerung -->
+        <section id="conclusion" class="conclusion" data-aos="fade-up">
+            <div class="conclusion-box">
+                <h2>Fazit zur Legalisierung von Cannabis</h2>
+                <ul>
+                    <li>Legalisierung von Cannabis kann gefährlich für die Gesellschaft sein</li>
+                    <li>Mögliche Zunahme des Konsums</li>
+                    <li>Gefahr für die öffentliche Sicherheit</li>
+                    <li>Höheres Risiko von Unfällen</li>
+                    <li>Mehr rechtliche Probleme</li>
+                    <li>Psychische Probleme bei Konsumenten</li>
+                    <li>Angstzustände</li>
+                    <li>Depressionen</li>
+                    <li>Wirtschaftliche Vorteile möglicherweise gering</li>
+                    <li>Berücksichtigung der gesellschaftlichen Kosten</li>
+                </ul>
+            </div>            
+        </section>
+        
     </main>
 
     <footer>
@@ -95,5 +125,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        AOS.init();
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
