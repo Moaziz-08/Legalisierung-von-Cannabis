@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #f0f8f5;
-    background-color: #0c0c0c;
+    background-color: #1c1c1c; /* Darker neutral background */
     overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@ html {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #006633, #003d19);
+    background: linear-gradient(135deg, #004d99, #007a3d); /* Blue to muted Green gradient */
     position: relative;
     height: 100vh;
     color: white;
@@ -51,7 +51,7 @@ html {
 .header-content h1 {
     font-size: 3.5em;
     font-weight: bold;
-    background: linear-gradient(45deg, #00ff99, #00cc66);
+    background: linear-gradient(45deg, #f0c048, #d04e5d); /* Yellow to muted Red gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -64,9 +64,10 @@ html {
     margin: 20px 0;
 }
 
+/* Call-to-Action Button */
 .cta-button {
-    background: linear-gradient(45deg, #00ff99, #00cc66);
-    color: #0c0c0c;
+    background: linear-gradient(45deg, #009e6b, #0066cc); /* Green to Blue gradient */
+    color: #fff;
     padding: 12px 30px;
     border-radius: 50px;
     text-transform: uppercase;
@@ -78,8 +79,7 @@ html {
 }
 
 .cta-button:hover {
-    background: linear-gradient(45deg, #00cc66, #00ff99);
-    transform: scale(1.1);
+    background: linear-gradient(45deg, #0066cc, #009e6b); /* Reversed gradient */
 }
 
 /* Fade In and Slide Animations */
@@ -121,7 +121,7 @@ html {
 }
 
 .section:nth-child(even) {
-    background-color: #111;
+    background-color: #2b2b2b; /* Slightly lighter than body for contrast */
 }
 
 .section-content {
@@ -159,7 +159,7 @@ html {
 .section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #00ff99;
+    color: #f0c048; /* Muted yellow for headers */
 }
 
 .section ul {
@@ -175,13 +175,13 @@ html {
 }
 
 .section ul li strong {
-    color: #00ff99;
+    color: #d04e5d; /* Muted red for emphasis */
 }
 
 /* Icon Styling */
 .section i {
     font-size: 1.3em;
-    color: #00ff99;
+    color: #009e6b; /* Muted green */
     margin-right: 10px;
 }
 
@@ -189,8 +189,8 @@ html {
 footer {
     text-align: center;
     padding: 40px 20px;
-    background-color: #0c0c0c;
-    color: #888;
+    background-color: #1c1c1c; /* Darker neutral footer */
+    color: #d0d0d0; /* Light grey for contrast */
     font-size: 0.9em;
 }
 
@@ -201,3 +201,215 @@ footer {
         text-align: left;
     }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f8f5;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 100, 255, 0.7), rgba(0, 200, 83, 0.7)), url('header-bg.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+nav.active {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00cc66;
+}
+
+.header-content {
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease;
+}
+
+.header-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00ff99, #00cc66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    animation: slideUp 1.2s ease;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+.scroll-link {
+    background: linear-gradient(45deg, #00ff99, #00cc66);
+    color: #0c0c0c;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.scroll-link:hover {
+    background: rgba(0, 200, 83, 1);
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform 0.5s ease;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.text-content {
+    color: #0c0c0c;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #007fff;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+.conclusion {
+    background-color: #2b2b2b; /* Helles Rot für den Hintergrund */
+    color: #333; /* Dunkles Grau für den Text */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+}
+
+.conclusion h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff0000; /* Dunkelroter Farbton für den Titel */
+}
+
+.conclusion p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin: 10px 0;
+}
+.conclusion-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Heller Hintergrund mit Transparenz */
+    border-radius: 15px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+    margin: 40px 20px; /* Außenabstand */
+}
+
+.conclusion-box h2 {
+    color: #ff3d00; /* Kreative Farbe für die Überschrift */
+    font-size: 2em; /* Größere Schrift für die Überschrift */
+    margin-bottom: 15px; /* Abstand unter der Überschrift */
+}
+
+.conclusion-box ul {
+    list-style-type: disc; /* Stil für Aufzählungspunkt */
+    padding-left: 20px; /* Einrückung für die Liste */
+    text-align: left; /* Text linksbündig */
+}
+
+.conclusion-box ul li {
+    margin: 10px 0; /* Abstand zwischen den Listenpunkten */
+    font-size: 1.2em; /* Schriftgröße für bessere Lesbarkeit */
+    color: #333; /* Dunklere Schriftfarbe für den Text */
+}
+
